@@ -30,3 +30,9 @@ form{
     margin: 0 0;
     margin-bottom: 10px;
 }
+@media (max-width: 600px){
+    body, form{
+        width: 100%;
+    } 
+    
+}
