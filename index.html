@@ -15,9 +15,9 @@
     <div class="container">
         <form action="#" id="survey-form">
             <div class="personal">
-            <label for="name" id="name-label">Name</label><input type="text" id="name" placeholder="Enter your name" required>
-            <label for="email" id="email-label">Email</label><input type="email" id="email" placeholder="Enter your email" required>
-            <label for="number" id="number-label">Age (optional)</label><input type="number" id="number" min="10" max="100" placeholder="Age">
+            <label for="name" id="name-label">Name</label><input type="text" id="name" placeholder=" Enter your name" required>
+            <label for="email" id="email-label">Email</label><input type="email" id="email" placeholder=" Enter your email" required>
+            <label for="number" id="number-label">Age (optional)</label><input type="number" id="number" min="10" max="100" placeholder=" Age">
             <label for="dropdown">Which option best describes your current role?</label>
                 <select name="role" id="dropdown" required>
                     <option disabled selected value>Select current role</option>
@@ -26,17 +26,17 @@
                     <option value="other">Other</option>
                 </select>
             </div>
-            <div class="choice">
-            <p>What's Your Purpose?</p>
+            <fieldset class="choice">
+            <legend>What's Your Purpose?</legend>
             <label for="purpose"><input type="radio" name="purpose" id="purpose" value="pro" required>Profesional Developer</label>
             <label for="purpose"><input type="radio" name="purpose" id="purpose" value="hobby" required>Hobby Developer</label>
-            </div>
-            <div class="choice">
-            <p>What would you like to improved?</p>
+            </fieldset>
+            <fieldset class="choice">
+            <legend>What would you like to improved?</legend>
             <label for="prefer"><input type="checkbox" name="prefer" value="front-end-developer">Front-End Developer</label>
             <label for="prefer"><input type="checkbox" name="prefer" value="back-end-developer">Back-End Developer</label>
             <label for="prefer"><input type="checkbox" name="prefer" value="dev-ops">Dev-ops</label>
-            </div>
+            </fieldset>
             <div class="comment">
             <p>Any comments or suggestions?</p>
             <textarea name="comment" id="comment" cols="30" rows="5" placeholder="Enter your comment here..." ></textarea>

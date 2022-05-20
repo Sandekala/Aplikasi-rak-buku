@@ -16,19 +16,55 @@ header{
 }
 .container{
     height: 100%;
-}
-form{
     margin: auto;
     width: 20em;
     background-color: rgb(27, 27, 50);
     padding: 20px;
     border-radius: 10px;
 }
+.container #survey-form .personal label{
+    margin-bottom: 0;
+    height: 20px;
+    
+}
+form{
+    margin: 0;
+    padding: 0;
+    
+}
 .personal input, select, label{
     display: block;
-    padding: 5px;
-    margin: 0 0;
+    padding: 0;
+    margin: 0;
+    border: 0;
+    height: 30px;
     margin-bottom: 10px;
+    width: 100%;
+    border-radius: 5px;
+    
+}
+.personal input, select{
+    color: gray;    
+}
+textarea{
+    width: 100%;
+    border-radius: 5px;
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+.button{
+    text-align: center;
+}
+.choice{
+    padding: 0;
+    margin-bottom: 10px;
+}
+.choice label{
+    margin: 5px;
+}
+.choice input{
+    margin: 5px;
 }
 @media (max-width: 600px){
     body, form{
