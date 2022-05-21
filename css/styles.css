@@ -10,6 +10,12 @@ body{
     background-size: cover;
     position: relative;
     color: white;
+    margin: 0;
+    padding: 0;
+}
+main{
+    margin: auto;
+    padding: 10px;
 }
 header{
     text-align: center;
@@ -42,9 +48,14 @@ form{
     width: 100%;
     border-radius: 5px;
     
+    
+}
+.personal label{
+    display: contents;
 }
 .personal input, select{
-    color: gray;    
+    color: gray;
+        
 }
 textarea{
     width: 100%;
@@ -67,8 +78,15 @@ textarea{
     margin: 5px;
 }
 @media (max-width: 600px){
-    body, form{
+    main , .container{
         width: 100%;
+        padding: 0;
+    } 
+    
+}
+@media (max-width: 600px){
+    #survey-form{
+        padding: 10px;
     } 
     
 }
