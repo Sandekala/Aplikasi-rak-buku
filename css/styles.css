@@ -5,9 +5,9 @@ body{
         rgba(136, 136, 206, 0.7)
       ),
       url(https://cdn.freecodecamp.org/testable-projects-fcc/images/survey-form-background.jpeg);
-    background-repeat: no-repeat;
+    background-repeat: repeat-y;
     background-position: center;
-    background-size: cover;
+    background-size: auto;
     position: relative;
     color: white;
     margin: 0;
@@ -19,6 +19,13 @@ main{
 }
 header{
     text-align: center;
+}
+footer{
+    text-align: center;
+}
+a{
+    text-decoration: none;
+    color: white;
 }
 .container{
     height: 100%;
