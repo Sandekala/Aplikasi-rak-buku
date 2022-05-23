@@ -4,9 +4,7 @@ body{
         rgba(58, 58, 158, 0.8),
         rgba(136, 136, 206, 0.7)
       ),
-      url(https://cdn.freecodecamp.org/testable-projects-fcc/images/survey-form-background.jpeg);
-    background-repeat: repeat-y;
-    background-position: center;
+      url(../images/bc.png);
     background-size: auto;
     position: relative;
     color: white;
