@@ -1,54 +1,56 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" type="text/css" href="css/styles.css">
-    <title>Survey Form</title>
-</head>
-<body>
-    <main>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/styles.css" />
+    <title>Aplikasi Rak Buku</title>
+  </head>
+  <body>
     <header>
-        <h1 id="title">Survey Form</h1>
-        <p id="description">Thank you for taking the time to fill out survey.</p>
+      <h1>Aplikasi Rak Buku</h1>
     </header>
     <div class="container">
-        <form action="#" id="survey-form">
-            <div class="personal">
-            <label for="name" id="name-label">Name</label><input type="text" id="name" placeholder=" Enter your name" required>
-            <label for="email" id="email-label">Email</label><input type="email" id="email" placeholder=" Enter your email" required>
-            <label for="number" id="number-label">Age (optional)</label><input type="number" id="number" min="10" max="100" placeholder=" Age">
-            <label for="dropdown">Which option best describes your current role?</label>
-                <select name="role" id="dropdown" required>
-                    <option disabled selected value>Select current role</option>
-                    <option value="student">Student</option>
-                    <option value="full-time job">Full-time Job</option>
-                    <option value="other">Other</option>
-                </select>
-            </div>
-            <fieldset class="choice">
-            <legend>What's Your Purpose?</legend>
-            <label for="purpose"><input type="radio" name="purpose" id="purpose" value="pro" required>Profesional Developer</label>
-            <label for="purpose"><input type="radio" name="purpose" id="purpose" value="hobby" required>Hobby Developer</label>
-            </fieldset>
-            <fieldset class="choice">
-            <legend>What would you like to improved?</legend>
-            <label for="prefer"><input type="checkbox" name="prefer" value="front-end-developer">Front-End Developer</label>
-            <label for="prefer"><input type="checkbox" name="prefer" value="back-end-developer">Back-End Developer</label>
-            <label for="prefer"><input type="checkbox" name="prefer" value="dev-ops">Dev-ops</label>
-            </fieldset>
-            <div class="comment">
-            <p>Any comments or suggestions?</p>
-            <textarea name="comment" id="comment" cols="30" rows="5" placeholder="Enter your comment here..." ></textarea>
-            </div>
-            <div class="button">
-                <button type="submit" id="submit">Submit</button>
-                <button type="reset" id="reset">Reset</button>
-            </div>
+      <fieldset class="input">
+        <legend>Silahkan masukkan Buku yang akan dibaca :)</legend>
+        <form action="" id="inputBuku">
+          <label for="buku">Judul Buku</label>
+          <input type="text" name="buku" id="buku" placeholder="Masukkan judul buku..." required />
+          <label for="penulis">Penulis</label>
+          <input type="text" name="penulis" id="penulis" placeholder="Masukkan penulis buku..." required />
+          <label for="tahun">Tahun Terbit</label>
+          <input type="number" name="tahun" id="tahun" placeholder="Masukkan tahun terbit buku..." required />
+          <input type="submit" name="submit" value="Mulai membaca Buku" />
         </form>
+      </fieldset>
+      <fieldset class="pencarian">
+        <legend>Cari Buku</legend>
+        <input type="text" name="cari" id="cari" placeholder="Silahkan masukkan kata kunci..." />
+      </fieldset>
+      <section class="rakBuku">
+        <fieldset class="listBuku" id="belumSelesai">
+          <legend>Belum Selesai Dibaca</legend>
+          <!-- <div class="dataBuku">
+            <h3>Judul Buku</h3>
+            <p>Penulis : Cek</p>
+            <p>Tahun : 2020</p>
+            <button class="hijau">Selesai dibaca</button>
+            <button class="merah">Hapus buku</button>
+          </div> -->
+        </fieldset>
+        <fieldset class="listBuku" id="sudahSelesai">
+          <legend>Sudah Selesai Dibaca</legend>
+        </fieldset>
+      </section>
     </div>
-</main>
-<footer>&copy; Copyrights : <a href="http://instagram.com/diimasaziiz" target="_blank">Dimas Abdul Aziz</a></footer>
-</body>
+
+    <footer>
+      <footer>
+        <h2>&copy; Copyrights : <a href="http://instagram.com/diimasaziiz" target="_blank">Dimas Abdul Aziz</a></h2>
+      </footer>
+    </footer>
+
+    <script src="js/script.js"></script>
+  </body>
 </html>
