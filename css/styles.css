@@ -20,6 +20,7 @@ header {
 }
 a,
 h2 {
+  font-size: medium;
   text-decoration: none;
   color: var(--secondary);
   margin: auto;
@@ -80,6 +81,14 @@ input[type='submit'] {
 }
 .listBuku {
   width: 40%;
+}
+@media screen and (max-width: 600px) {
+  .listBuku {
+    width: 100%;
+  }
+  .container {
+    margin: 100px 10px;
+  }
 }
 .dataBuku {
   border: 1px solid var(--secondary);
