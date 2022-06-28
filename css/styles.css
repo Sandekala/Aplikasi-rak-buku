@@ -93,12 +93,14 @@ p {
   margin: 0 5px 5px;
 }
 .hijau {
+  cursor: pointer;
   background-color: green;
   color: var(--secondary);
   border-radius: 5px;
   padding: 5px;
 }
 .merah {
+  cursor: pointer;
   background-color: red;
   color: var(--secondary);
   border-radius: 5px;
