@@ -27,10 +27,10 @@
       <fieldset class="pencarian">
         <legend>Cari Buku</legend>
         <input type="text" name="cari" id="cari" placeholder="Silahkan masukkan kata kunci..." />
+        <button class="tombolReset">X</button>
       </fieldset>
       <section class="rakBuku">
         <fieldset class="listBuku" id="belumSelesai">
-          <legend>Belum Selesai Dibaca</legend>
           <!-- <div class="dataBuku">
             <h3>Judul Buku</h3>
             <p>Penulis : Cek</p>
@@ -39,9 +39,7 @@
             <button class="merah">Hapus buku</button>
           </div> -->
         </fieldset>
-        <fieldset class="listBuku" id="sudahSelesai">
-          <legend>Sudah Selesai Dibaca</legend>
-        </fieldset>
+        <fieldset class="listBuku" id="sudahSelesai"></fieldset>
       </section>
     </div>
 
@@ -52,5 +50,6 @@
     </footer>
 
     <script src="js/script.js"></script>
+    <script src="node_modules/sweetalert2/dist/sweetalert2.all.min.js"></script>
   </body>
 </html>

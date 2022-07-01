@@ -38,15 +38,20 @@ function buatBuku(bukuObject) {
   const judulBuku = document.createElement('h3');
   judulBuku.innerText = buku;
 
-  const penulisBuku = document.createElement('p');
-  penulisBuku.innerText = `Penulis : ${penulis}`;
-
-  const tahunTerbit = document.createElement('p');
-  tahunTerbit.innerText = `Tahun : ${tahun}`;
+  const tabel = document.createElement('table');
+  const row1 = document.createElement('tr');
+  const row2 = document.createElement('tr');
+  row1.innerHTML = `<td>Penulis</td>`;
+  row1.innerHTML += `<td>:</td>`;
+  row1.innerHTML += `<td>${penulis}</td>`;
+  row2.innerHTML = `<td>Tahun</td>`;
+  row2.innerHTML += `<td>:</td>`;
+  row2.innerHTML += `<td>${tahun}</td>`;
+  tabel.append(row1, row2);
 
   const container = document.createElement('div');
   container.classList.add('dataBuku');
-  container.append(judulBuku, penulisBuku, tahunTerbit);
+  container.append(judulBuku, tabel);
   container.setAttribute('id', `buku-${id}`);
 
   if (selesai) {
@@ -61,10 +66,22 @@ function buatBuku(bukuObject) {
     tombolHapus.classList.add('merah');
     tombolHapus.innerText = 'Hapus Buku';
     tombolHapus.addEventListener('click', function () {
-      const hapus = confirm('Apakah anda yakin akan menghapus buku ini ?');
-      if (hapus) {
-        hapusBuku(id);
-      }
+      if (
+        Swal.fire({
+          title: 'Apakah anda yakin akan menghapus buku ini ?',
+          showCancelButton: true,
+          confirmButtonText: 'Ya!',
+          confirmButtonColor: '#008000',
+          cancelButtonColor: '#ff0000',
+          cancelButtonText: 'Batal',
+          icon: 'warning',
+        }).then((result) => {
+          if (result.isConfirmed) {
+            Swal.fire({ title: 'Buku berhasil dihapus', icon: 'success', confirmButtonColor: '#008000' });
+            hapusBuku(id);
+          }
+        })
+      );
     });
 
     container.append(tombolKembali, tombolHapus);
@@ -80,10 +97,22 @@ function buatBuku(bukuObject) {
     tombolHapus.classList.add('merah');
     tombolHapus.innerText = 'Hapus Buku';
     tombolHapus.addEventListener('click', function () {
-      const hapus = confirm('Apakah anda yakin akan menghapus buku ini ?');
-      if (hapus) {
-        hapusBuku(id);
-      }
+      if (
+        Swal.fire({
+          title: 'Apakah anda yakin akan menghapus buku ini ?',
+          showCancelButton: true,
+          confirmButtonText: 'Ya!',
+          confirmButtonColor: '#008000',
+          cancelButtonColor: '#ff0000',
+          cancelButtonText: 'Batal',
+          icon: 'warning',
+        }).then((result) => {
+          if (result.isConfirmed) {
+            Swal.fire({ title: 'Buku berhasil dihapus', icon: 'success', confirmButtonColor: '#008000' });
+            hapusBuku(id);
+          }
+        })
+      );
     });
 
     container.append(tombolSelesai, tombolHapus);
@@ -194,7 +223,22 @@ document.addEventListener(RENDER_EVENT, function () {
   }
 });
 
-document.querySelector('#cari').addEventListener('input', filterList);
+const cari = document.querySelector('#cari');
+const tombolReset = document.querySelector('.tombolReset');
+cari.addEventListener('focus', function () {
+  tombolReset.style.visibility = 'visible';
+});
+
+tombolReset.addEventListener('click', function () {
+  const daftarBuku = document.querySelectorAll('.dataBuku');
+  const cariInput = document.querySelector('#cari');
+  cariInput.value = '';
+  tombolReset.style.visibility = 'hidden';
+  daftarBuku.forEach((buku) => {
+    buku.style.display = '';
+  });
+});
+cari.addEventListener('input', filterList);
 
 function filterList() {
   const cariInput = document.querySelector('#cari');
